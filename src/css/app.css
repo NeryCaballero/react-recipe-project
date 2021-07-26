@@ -10,12 +10,13 @@
 }
 
 html {
-    font-size: 25px;
+    font-size: 15px;
 }
 
 body {
     padding: 0;
     margin: 0;
+    background-color: grey;
 }
 
 .mr-1 {
