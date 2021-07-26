@@ -1,0 +1,19 @@
+.btn {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background-color: hsl(200, 100%, 50%);
+    color: white;
+}
+
+.btn--primary:hover {
+    background-color: hsl(200, 100%, 35%);
+}
