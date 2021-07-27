@@ -4,9 +4,11 @@
 @import 'recipe-list.css';
 @import 'recipe.css';
 @import 'ingredient-list.css';
+@import 'recipe-edit.css';
 
 *, *::before, *::after {
     font-family:'Courier New', Courier, monospace;
+    box-sizing: border-box;
 }
 
 html {
@@ -16,7 +18,7 @@ html {
 body {
     padding: 0;
     margin: 0;
-    background-color: grey;
+    /* background-color: grey; */
 }
 
 .mr-1 {

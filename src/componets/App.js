@@ -1,14 +1,17 @@
 import React,  { useState, useEffect } from 'react'
 import RecipeList from './RecipeList'
+import RecipeEdit from './RecipeEdit';
 import '../css/app.css'
 import { v4 as uuidv4 } from 'uuid';
-// import Recipe from './Recipe';
+
 
 export const RecipeContext = React.createContext()
 const LOCAL_STORAGE_KEY = 'reactRecipeProject.recipes'
 
 function App() {
   const [recipes, setRecipes] = useState(sampleRecipes)
+  const [selectedRecipeId, setSelectedRecipeId] = useState()
+  const selectedRecipe = recipes.find(recipe => recipe.id === selectedRecipeId)
 
   useEffect(() => {
     const recipeJSON = localStorage.getItem(LOCAL_STORAGE_KEY)
@@ -22,6 +25,7 @@ function App() {
 
   const recipeContextValue = {
     handleRecipeAdd,
+    handleRecipeEdit,
     handleRecipeDelete
   }
 
@@ -40,6 +44,10 @@ function App() {
     setRecipes([...recipes, newRecipe])
   }
 
+  function handleRecipeEdit(id) {
+    setSelectedRecipeId(id)
+  }
+
   function handleRecipeDelete(id) {
     setRecipes(recipes.filter(recipe => recipe.id !== id))
   }
@@ -47,6 +55,7 @@ function App() {
   return (
     <RecipeContext.Provider value={recipeContextValue}>
       <RecipeList recipes={recipes} />
+      {selectedRecipe && <RecipeEdit recipe={selectedRecipe} />}
     </RecipeContext.Provider>
     
   )
