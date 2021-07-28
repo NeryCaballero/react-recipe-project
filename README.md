@@ -1,10 +1,19 @@
 # React Recipe App
+[Deployed Here](https://wonderful-pike-7beeb0.netlify.app/).
 
+This app allows you to keep your favorite recipes all in one place.
+
+- Click on the Add Recipe button to create a new recipe. 
+- Read all your recipes as you type in.
+- Click on the Edit button to update a recipe.
+- Click on the Delete button to remove a recipe.
 
 ## Topics Covered
 - Understanding components.
-- - Planification of the structure of the app.
-- - Nesting components.
+  - Planification of the structure of the app.
+  - Nesting components.
+  - Interactivity of components.
+  - Use of Context, Props, Hooks, useState, useEffect, LocalStorage.
 
 
 ## Getting Started with Create React App
