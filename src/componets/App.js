@@ -1,7 +1,8 @@
 import React,  { useState, useEffect } from 'react'
 import RecipeList from './RecipeList'
 import RecipeEdit from './RecipeEdit';
-import '../css/app.css'
+import Title from './Title';
+import '../css/app.css';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -66,8 +67,11 @@ function App() {
 
   return (
     <RecipeContext.Provider value={recipeContextValue}>
-      <RecipeList recipes={recipes} />
-      {selectedRecipe && <RecipeEdit recipe={selectedRecipe} />}
+      <Title />
+      <div className='main'>
+        <RecipeList recipes={recipes} />
+        {selectedRecipe && <RecipeEdit recipe={selectedRecipe} />}
+      </div>
     </RecipeContext.Provider>
     
   )
@@ -76,9 +80,9 @@ function App() {
 const sampleRecipes = [
   {
     id: 1,
-    name: 'Recipe 1',
+    name: 'Guacamole',
     servings: 3,
-    cookTime: '0:15',
+    cookTime: '0:25',
     instructions: "1. Aaaaa\n2. Bbbbb\n3. Ccccc",
     ingredients: [
       {
@@ -90,25 +94,45 @@ const sampleRecipes = [
         id: 2,
         name: 'Tomato',
         amount: 1
+      },
+      {
+        id: 3,
+        name: 'Parsley',
+        amount: '2 tbsp'
+      },
+      {
+        id: 4,
+        name: 'Lime Juice',
+        amount: '1 tbsp'
+      }, 
+      {
+        id: 5,
+        name: 'Salt&Pepper',
+        amount: 'To taste'
       }
     ]
   },
   {
     id: 2,
-    name: 'Recipe 2',
-    servings: 5,
-    cookTime: '0:10',
+    name: 'PB&J Sandwich',
+    servings: 1,
+    cookTime: '0:05',
     instructions: "1. Ddddd\n2. Bbbbb\n3. Ccccc",
     ingredients: [
       {
         id: 1,
         name: 'Bread',
-        amount: 3
+        amount: 2
       },
       {
         id: 2,
-        name: 'Hummus',
-        amount: 3
+        name: 'Peanut Buuter',
+        amount: '2 tbsp'
+      },
+      {
+        id: 3,
+        name: 'Jam',
+        amount: '1 tbsp'
       }
     ]
   }

@@ -31,7 +31,7 @@
 
 .recipe__value {
     font-weight: 300;
-    color: gray;
+    color: rgb(102, 83, 45);
 }
 
 .recipe__value--indented {

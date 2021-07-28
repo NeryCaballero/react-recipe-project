@@ -1,13 +1,14 @@
 @import-normalize;
-@import 'font.css';
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
 @import 'buttons.css';
 @import 'recipe-list.css';
 @import 'recipe.css';
 @import 'ingredient-list.css';
 @import 'recipe-edit.css';
+@import 'title.css';
 
 *, *::before, *::after {
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Quicksand', sans-serif;
     box-sizing: border-box;
 }
 
@@ -18,9 +19,17 @@ html {
 body {
     padding: 0;
     margin: 0;
-    /* background-color: grey; */
+    /* background-color: rgba(255, 255, 255, 0.95); */
+}
+
+.main {
+    position: relative;
 }
 
 .mr-1 {
     margin-right: 5px;
+}
+
+.p-25 {
+    padding: 25px;
 }

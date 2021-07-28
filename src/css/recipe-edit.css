@@ -5,11 +5,10 @@
     position: fixed;
     overflow-y: auto;
     right: 0;
-    top: 0;
+    top: 115px;
     width: 50%;
 }
 
-/* .recipe-edit__ */
 .recipe-edit__remove-button-container {
     text-align: end;
 }
