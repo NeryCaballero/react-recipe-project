@@ -1,5 +1,5 @@
 # React Recipe App
-[Deployed Here](https://wonderful-pike-7beeb0.netlify.app/).
+[Deployed on Netlify](https://wonderful-pike-7beeb0.netlify.app/).
 
 This app allows you to keep your favorite recipes all in one place.
 
